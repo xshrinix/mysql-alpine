@@ -77,9 +77,6 @@ EOF
      echo >&2 'MySQL init process failed.'
      exit 1
   fi
-  echo "use $MYSQL_DATABASE;" >> $tfile
-  echo "CREATE TABLE `user` ( `user_id` INT AUTO_INCREMENT PRIMARY KEY, `first_name` VARCHAR(255), `last_name` VARCHAR(255));" >> $tfile
-  echo "INSERT INTO `user` (`first_name`, 'last_name') values ('Shrinivasan', 'Pulyadi');" >> $tfile
   "${mysql[@]}" < $tfile
 	
   rm -f $tfile
