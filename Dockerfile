@@ -13,4 +13,4 @@ EXPOSE 3306
 
 RUN chmod +x /startup.sh
 
-CMD ["./startup.sh"]
+CMD ["/startup.sh"]
