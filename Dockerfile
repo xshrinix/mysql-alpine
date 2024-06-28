@@ -1,6 +1,4 @@
-FROM alpine:3.5
-
-MAINTAINER batlley
+FROM alpine:3.19
 
 WORKDIR /data
 
@@ -13,4 +11,6 @@ COPY my.cnf /etc/mysql/my.cnf
 
 EXPOSE 3306
 
-CMD ["/startup.sh"]
+RUN chmod +x /startup.sh
+
+CMD ["./startup.sh"]
