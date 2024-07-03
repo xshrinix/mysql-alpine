@@ -16,7 +16,7 @@ else
   rm -f /run/mysqld/msqld.sock
 fi
 
-if [ -d /data/mysql ]; then
+if [ -d /mnt/storage/mysql ]; then
   echo "[i] MySQL directory already present, skipping creation"
 else
   echo "[i] MySQL data directory not found, creating initial DBs"
